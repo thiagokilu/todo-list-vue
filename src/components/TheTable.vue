@@ -1,13 +1,19 @@
 <template>
   <div class="main">
     <div class="input-container">
-      <input type="text" class="input-text" v-model="inputText" />
+      <input
+        type="text"
+        class="input-text"
+        v-model="inputText"
+        @keyup.enter="adicionar"
+      />
       <input
         type="date"
         name="date"
         id="date"
         v-model="inputDate"
         class="input-date"
+        @keyup.enter="adicionar"
       />
       <p @click="adicionar" class="btn">
         <VIcon name="bi-clipboard2-plus-fill" scale="2" />
